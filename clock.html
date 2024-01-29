@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            color: #333;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body onload="showtime()">
+    <h1>clock</h1>
+    <script>
+        function showtime() {
+            var d = new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            var session = (h >= 12) ? "PM" : "AM";
+
+            if (h > 12) {
+                h = h - 12;
+            }
+            if (h === 0) {
+                h = 12;
+            }
+
+            h = h < 10 ? "0" + h : h;
+            m = m < 10 ? "0" + m : m;
+            s = s < 10 ? "0" + s : s;
+
+            var time = h + " : " + m + " : " + s + " " + session;
+            document.getElementsByTagName('h1')[0].innerText = time;
+
+            setTimeout(showtime, 1000);
+        }
+    </script>
+</body>
+</html>

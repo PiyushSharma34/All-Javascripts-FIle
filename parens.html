@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+#outer{
+
+    background-color: yellow;height: auto;
+    width: auto;
+    border: 10px  groove black;font-size: 50px;
+}
+#inner{
+    background-color: green;
+    border: 5px solid red;margin: 60px;font-size: 50px;
+}
+#hello{
+    background-color: red;
+    border: 5px inset blue;height: 200px;width: 200px;
+margin: 20px;
+font-size: 50px;
+}
+
+#good{
+background-color: aqua;height: 200px;width: 200px;
+border: 8px  solid white;margin: 60px;
+
+}
+</style>
+
+</head>
+<body>
+    <div id="outer">
+        outer
+<div id="inner">inner
+    <div  id="hello">
+hello
+    </div>
+    <div id="good">good</div>
+</div>
+
+    </div>
+
+
+<script>
+var a  = document.getElementById("hello").nextSibling;
+document.getElementById("hello").style.background = "blue";
+
+</script>
+
+
+</body>
+</html>

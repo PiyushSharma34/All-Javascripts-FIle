@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    NAME: <input type="TEXT" id="name"  onfocus="ram()" onblur="ra()"><BR><BR>
+    FATHER NAME: <input type="TEXT" class="F"><BR><BR>
+   MOTHER NAME: <input type="TEXT" class="M"><BR><BR>
+    MOTHER NAME: <input type="TEXT" id="m"><BR><BR>
+    YOUR CITY<BR><BR>
+    <SELECT id="se">
+<option>RURA</option>
+<option>KANPUR</option>
+<option>ALLAHABAD</option>
+<option>KANPUR</option>
+<option>BHAUPUR</option>
+    </SELECT>
+<button id="su" onclick="ra()">SUBMIT</button>
+
+
+
+
+
+
+<script>
+function ram(){
+document.getElementById("name").style.background = "yellow";
+document.getElementById("name").style.border = "10px solid blue";
+document.getElementById("name").style.fontSize= "50px";
+document.getElementById("name").style.textAlign= "center";
+document.getElementById("name").style.color= "red";
+
+}
+function ra(){
+document.getElementById("name").style.background = "";
+document.getElementById("name").style.border = "1px solid blue";
+document.getElementById("name").style.fontSize= "15px";
+document.getElementById("name").style.textAlign= "center";
+document.getElementById("name").style.color= "red"
+}
+
+
+document.getElementById("m").addEventListener("focus",function(){
+this.style.background = "yellow";
+this.style.border = "5px inset blue";
+this.style.borderRedius = "10px ";
+this.style.color = "green";
+this.style.fontSize = "50px";
+})
+
+document.getElementById("m").addEventListener("blur",function(){
+this.style.background = "";
+this.style.border = "";
+this.style.borderRedius = "0px ";
+this.style.color = "";
+this.style.fontSize = "20px";
+
+
+})
+
+
+document.getElementById("m").addEventListener("select",function(){
+this.style.background = "pink";
+this.style.border = "20px inset red";
+
+})
+
+function ra(){
+document.write("<H1>YOUR FORM IS SUBMITTED SUCCESSFULLY</H1>");
+}
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#box{
+    color: rgb(0, 0, 0);
+    background-color: rgb(135, 135, 135);
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 200px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div id="box"><h1>Piyush Bharadwaj</h1></div>
+
+
+    <script>
+document.getElementById("box").addEventListener("mouseenter",function(){
+this.style.background="red";
+// this.style.border="5px solid green";
+this.style.color='black';
+this.style.height='300px';
+
+})
+
+
+document.getElementById("box").addEventListener("mouseleave",function(){
+    this.style.background="";
+this.style.border="";
+this.style.height='';
+this.style.color='yellow';
+
+
+
+})
+    </script>
+</body>
+</html>

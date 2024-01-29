@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#main{
+height: 300px;
+width: 300px;
+background-color: gray; 
+}
+
+
+    </style>
+</head>
+<body>
+    
+<div id="main">Lorem <strong>t consectetur, adipisicing </strong> ipsum dolor sit ameelit. Voluptatibus, qui!</div>
+
+
+<script>
+document.getElementById("main").addEventListener("mouseenter",function(){
+this.style.background="yellow";
+this.style.height="200px";
+
+
+})
+document.getElementById("main").addEventListener("mouseleave",function(){
+this.style.background="";
+this.style.height="";
+this.innerHTML;
+
+
+})
+
+var a=document.getElementById("main").innerHTML="we,fnekl";
+document.write(a);
+// $(document).ready(function () {
+//     $("#main").mouseenter(function () {
+//      $("#main").css("background","yellow"); 
+//     });
+    
+// });
+
+// var a = document.querySelector("#main").innerText;
+// alert(a);
+
+
+</script>
+
+</body>
+</html>
